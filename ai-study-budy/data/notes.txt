@@ -1,0 +1,8 @@
+What are the data types? Primative or Compound structures
+Are all realtions total ordering? Not all are for example trees have partial ordering as they are not strongly connected
+Continguous list and its pros and cons? Pros: they are efficient in memoery spaces. Cons: inserting and deleting is difficult.
+What are doubly linked list? They are lists in which the front points to the next node and the back points to the previous one.
+Linked list as well as how data is accessed? They are lists where the front points to the next node. To access a 3 you start from head and go to each one till you get to 3.
+Lists operations? Insert(v,i) insert v at i.
+# Add your Q&A pairs here in the format:
+# Question? Answer
