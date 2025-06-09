@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Buddy Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        input[type=text] { width: 70%; padding: 10px; }
+        input[type=submit] { padding: 10px 20px; }
+        .response { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Ask Study Buddy</h1>
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Type your question..." required>
+        <input type="submit" value="Ask">
+    </form>
+
+    {% if response %}
+        <div class="response">
+            <p><strong>Buddy:</strong> {{ response }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
