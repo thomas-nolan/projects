@@ -14,6 +14,14 @@ This is a simple yet smart Python chatbot that answers questions from a notes fi
 - Compares user input to known questions using **Jaccard similarity**
 - Returns the best-matching question along with its answer or a fallback if no match is found
 
+# Features
+
+- Easy to update notes by editing a simple .txt file
+- Streamlined yet effective NLP processing pipeline for understanding questions
+- Providines a real-time answers to the most relevant content in your notes
+- Features a loading spinner animation to indicate when the bot is processing your question
+
+
 # How to run
 
 1. Make sure `data/notes.txt` exists and contains questions and answers in the format:  
@@ -29,5 +37,5 @@ python download.py
 4. Start the chatbot using the following script:
 ```bash
 cd src
-python main.py
+python app.py
 ```

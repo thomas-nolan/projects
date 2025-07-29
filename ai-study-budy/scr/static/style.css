@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    background-color: #333;
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 90%;
+    flex-grow: 1;
+    max-width: 700px; /* Limit content width */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+h1 {
+    color: #ffff; 
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em; 
+}
+form {
+    display: flex;
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center items in the form */
+}
+input[type="text"] {
+    flex-grow: 1; 
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+    min-width: 200px; /* Ensure input is not too small */
+}
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Blue glow on focus */
+}
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+input[type="submit"]:active {
+    transform: translateY(0); /* Return to normal on click */
+}
+
+.loading-indicator {
+    display: none; /* Initially hidden */
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff; /* A matching blue for the text */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.loading-indicator p {
+    margin-bottom: 10px;
+}
+
+/* Simple CSS Spinner */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-top: 4px solid #007bff; /* Blue top border for spinning effect */
+    border-radius: 50%; /* Makes it a circle */
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite; /* Spin animation */
+    margin: 0 auto; /* Center the spinner */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.response {
+    background-color: #e9f7ff; /* Light blue background for response */
+    border-left: 5px solid #007bff; /* Blue left border */
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 25px; /* More space above response */
+    line-height: 1.6;
+    color: #333;
+    font-size: 1.1em;
+    animation: fadeIn 0.5s ease-out; /* Add a fade-in animation */
+}
+.response p {
+    margin: 0; /* Remove default paragraph margin inside response */
+}
+.response strong {
+    color: #0056b3
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
